@@ -9,7 +9,7 @@ $.options = {
 // ============== Общие настроки ==============
 
 	$.options.start 				= 'front';		// Версия gulp (front,server)
-	$.options.cssCompile 		= 'postcss';			// css прероцессор (sass,postcss)
+	//$.options.cssCompile 		= 'postcss';			// css прероцессор (sass,postcss)
 	$.options.htmlCompile 	= 'pug';			// html прероцессор (pug)
 	$.options.clearDep   		= true;  			// Очищать не используемые зависимости
 	$.options.clearBuiild   = true;  			// Очищать папку с компилированными файлами при запуске gulp
@@ -25,7 +25,7 @@ $.options = {
 // ============== Настройки папок ============== 
 
 	// == Исходники ==
-	$.path.source.folder = 'src'; 						// Папка c исходниками
+	$.path.source.folder = 'src'; 							// Папка c исходниками
 	$.path.source.css = 'style';  							// Папка c sass файлами
 	$.path.source.templates = 'templates';  		// Папка c файлами шаблонизатора
 	$.path.source.views = 'views';  						// Папка c файлами шаблонизатора (для сервера)

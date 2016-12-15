@@ -1,0 +1,10 @@
+@mixin fonts($mainFonts,$style:"Regular",$sep:"-",$standart:true){
+
+	@if($standart != false){
+		font-family: $mainFonts + $sep + $style , Arial, sans-serif;
+	}
+	@else{
+		font-family: $mainFonts + $sep + $style;
+	}
+	
+}

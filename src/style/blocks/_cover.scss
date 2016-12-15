@@ -1,0 +1,58 @@
+//============== width <= 320px ==============
+.cover{
+	width: rem(300px);
+  background-color: rgba($colorLight,0.85);
+  border-radius: rem(5px);
+  overflow: hidden;
+  @extend %slick;
+}
+
+.cover--welcome{
+	@include center();
+	font-size: 100%;
+	padding-top: em(40px);
+	.cover__part{
+		&:nth-child(1){
+			margin-bottom: em(21px);
+		}
+		&:nth-child(2){
+			margin-bottom: em(32px);
+		}
+		&:nth-child(3){
+			margin-bottom: em(37px);
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+
+//============== width >= 768px ==============
+@include apply-to($tablet){
+	.cover{
+		width: rem(348px);
+	}
+	.cover--welcome{
+		margin-bottom: rem(112px);
+	}
+}
+
+
+//============== width >= 1200 ==============
+@include apply-to($notebook){
+	.cover{
+		width: rem(380px);
+	}
+	.cover--welcome{
+		.cover__part{
+			&:nth-child(1){
+				margin-bottom: em(14px);
+			}
+			&:nth-child(3){
+				margin-bottom: em(33px);
+			}
+		}
+	}
+}

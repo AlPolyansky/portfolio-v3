@@ -1,0 +1,14 @@
+@mixin clear($ie: false){
+
+// IE 8+
+@if($ie == false){
+	@extend %clear;
+}
+	
+// IE 6+
+@elseif($ie == true){
+	@extend %clearIE;
+}
+
+
+}

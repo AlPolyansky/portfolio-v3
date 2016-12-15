@@ -1,0 +1,35 @@
+//============== width <= 320px ==============
+.copyrigth{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: $colorLight;
+	text-align: center;
+	font-family: $r-l;
+	&__text{
+		display: inline-block;
+		font-size: rem(14px);
+		max-width: em(244px);
+	}
+}
+
+#welcome-page{
+	.copyrigth{
+		margin-bottom: rem(8px);
+	}
+}
+
+//============== width >= 768px ==============
+@include apply-to($tablet){
+	.copyrigth{
+		&__text{
+			font-size: rem(16px);
+			max-width: em(500px);
+		}
+	}
+	#welcome-page{
+	.copyrigth{
+			margin-bottom: rem(30px);
+		}
+	}
+}

@@ -1,0 +1,33 @@
+//============== width <= 320px ==============
+
+$socila_size : rem(26px);
+
+.social{
+	width: 100%;
+	text-align: center;
+	&__list{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	&__item{
+		display: inline-block;
+		width: $socila_size;
+		height: $socila_size;
+		margin-right: rem(27px);
+		&:last-child{
+			margin-right: 0;
+		}
+		text-align: center;
+	}
+	&__ico{
+		height: 100%;
+		width: 100%;
+		display: inline-block;
+		fill: $colorMain;
+		@include trans(.1s);
+		&:hover{
+			fill: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 9.2157)
+		}
+	}	
+}

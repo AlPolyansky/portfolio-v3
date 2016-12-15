@@ -1,0 +1,67 @@
+// Classes for CENTER mixin
+%pos-absolute{
+	position: absolute;
+}
+
+%pos-top{
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+%pos-bottom{
+	bottom: 0;
+	left:50%;
+	transform: translate(-50%, 0);
+}
+
+%pos-left{
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+%pos-right{
+	top: 50%;
+	right:0;
+	transform: translate(0, -50%);
+}
+
+%pos-center{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+// Classes for CLEAR mixin
+
+%clear{
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+%clearIE{
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+  }
+	&:after {
+		clear: both;
+  }
+}
+
+// Classes for CLOTH mixin
+
+%cloth{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}

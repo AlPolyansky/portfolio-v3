@@ -1,0 +1,29 @@
+@mixin apply-to($size, $width: min, $size2: null, $width2:min){
+	@if($size2){
+		@media only screen and(#{$width}-width: $size) and (#{$width2}-width: $size2){
+			@content;
+		}
+	} @else {
+		@media only screen and(#{$width}-width: $size){
+			@content;
+		}
+	}
+
+	
+}
+
+@mixin retina(){
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (-moz-min-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 3/2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and ( min--moz-device-pixel-ratio: 1.5),
+		only screen and ( min-device-pixel-ratio: 1.5),
+		only screen and ( min-device-pixel-ratio: 2),
+		only screen and ( min-resolution: 192dpi),
+		only screen and ( min-resolution: 2dppx) {
+			@content;
+	}
+}

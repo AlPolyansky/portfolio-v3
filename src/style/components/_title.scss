@@ -1,0 +1,29 @@
+//============== width <= 320px ==============
+
+.title{
+	text-align: center;
+	font-size: rem(21px);
+	color: $colorBase;
+	@extend %slick;
+}
+
+.title--small{
+	font-size: rem(14px);
+	color: rgba($colorBase, 0.8)
+}
+
+.cover--welcome{
+	.title--medium{
+		margin-bottom: 10px;
+	}
+}
+
+//============== width >= 768px ==============
+@include apply-to($tablet){
+	.title--small{
+		font-size: rem(16px);
+	}
+	.title--medium{
+		font-size: rem(28px);
+	}
+}

@@ -1,0 +1,18 @@
+//============== width <= 320px ==============
+
+$avatar-size: 141px;
+
+.avatar{
+	overflow: hidden;
+	&__img{
+  	display: block;
+  	width: 100%;
+  }
+}
+
+.avatar-rounder{
+	width: rem($avatar-size);
+  height: rem($avatar-size);
+  border-radius: 50%;
+  margin: 0 auto;
+}

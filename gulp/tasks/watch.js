@@ -10,12 +10,7 @@ module.exports = function() {
 
 	// Отслеживание файлов
   $.gulp.task('watch', function() {
-  	if($.options.cssCompile == 'sass'){
-  		$.gulp.watch(`./${$.path.source.folder}/${$.path.source.css}/**/*.scss`, $.gulp.series('sass'));
-  	}
-  	if($.options.cssCompile == 'postcss'){
-  		$.gulp.watch(`./${$.path.source.folder}/${$.path.source.css}/**/*.css`, $.gulp.series('postcss'));
-  	}
+  	$.gulp.watch(`./${$.path.source.folder}/${$.path.source.css}/**/*.scss`, $.gulp.series('style'));
     if($.options.start == 'front'){
       if($.options.htmlCompile == 'pug'){
        $.gulp.watch(`./${$.path.source.folder}/${$.path.source.templates}/**/*.pug`, $.gulp.series('pug', 'reload'));

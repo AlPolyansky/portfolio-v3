@@ -1,0 +1,50 @@
+//============== width <= 320px ==============
+
+.buttons{
+	width: 100%;
+	display: flex;
+	flex-grow: 1;
+	&__item{
+		display: flex;
+		flex-grow: 1;
+		border-right: rem(2px) solid rgba($colorLight,.5);
+		&:last-child{
+			border-right: none;
+		}
+	}
+	&__link{
+		background-color: $colorMain;
+		text-decoration: none;
+		color: $colorLight;
+		text-align: center;
+		width: 100%;
+		font-size: rem(14px);
+		padding: em(14px) em(20px);
+		@include trans(.1s);
+		&:hover{
+			background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 9.2157)
+		}
+	}
+}
+
+
+//============== width >= 768px ==============
+@include apply-to($tablet){
+	.buttons{
+		&__link{
+			font-size: rem(16px);
+			padding: em(15px) em(20px);
+		}
+	}
+}
+
+//============== width >= 1200px ==============
+
+@include apply-to($notebook){
+	.buttons{
+		&__link{
+			font-size: rem(16px);
+			padding: em(13px) em(20px);
+		}
+	}
+}

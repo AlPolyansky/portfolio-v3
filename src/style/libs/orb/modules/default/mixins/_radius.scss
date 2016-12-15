@@ -1,0 +1,9 @@
+@mixin radius($over: true, $rad: 50%){
+	@if($over == true){
+		overflow: hidden;
+	} @elseif($over != false){
+		overflow: $over;
+	}
+
+	border-radius: $rad;
+}

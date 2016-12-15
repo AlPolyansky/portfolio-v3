@@ -35,9 +35,9 @@ fs.readdirSync($.path.tasks).forEach(function(item){
 
 $.gulp.task('default',$.gulp.series(
 		'clean',
-		'clearDep',
+		//'clearDep',
 	$.gulp.parallel(
-		'css-compile',
+		'style',
 		'html-compile',
 		'css-libs',
 		'js-libs',

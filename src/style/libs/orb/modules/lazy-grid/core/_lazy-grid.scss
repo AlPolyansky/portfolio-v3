@@ -1,0 +1,57 @@
+@mixin container($width: $containerWidth, $padding: $paddingContiner,$clear: false){
+	@if($box-sizing == true){
+		box-sizing: border-box;
+	}
+	
+	width: $width;
+	max-width: 100%;
+	padding-left: $padding;
+	padding-right: $padding;
+	margin : 0 auto;
+	@if($clear == true){
+			&:after,&:before{
+			display: table;
+			content: "";
+		}
+	}
+}
+
+@mixin col($num,$padding: $gutter,$clear: false){
+	@if($box-sizing == true){
+		box-sizing: border-box;
+	}
+	float: left;
+	padding-left: $padding;
+	padding-right: $padding;
+	width: 100%;
+	max-width: percentage($num/$cols);
+	@if($clear == true){
+			&:after,&:before{
+			display: table;
+			content: "";
+		}
+	}
+}
+
+
+@mixin pull($col){
+	position: relative;
+	left: percentage($col/$cols);
+}
+
+@mixin push($col){
+	position: relative;
+	right: percentage($col/$cols);
+}
+
+@mixin offset($col){
+	margin-left: percentage($col/$cols);
+}
+
+@mixin clearfix(){
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

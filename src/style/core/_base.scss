@@ -1,0 +1,73 @@
+// options
+$slick-blocks : true;
+
+// size
+$mobile 	: 320px;
+$tablet 	: 768px;
+$notebook : 1200px;
+$desktop	: 1800px;
+
+// fonts
+$r-m : 'Roboto-Medium';
+$r-l :'Roboto Light';
+
+//transition
+$slick-speed : .3s;
+
+//path
+$img : '../img/';
+
+*, *::after, *::before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//colors
+
+$colorLight: #fcfcfc;
+$colorBase: #455a64;
+$colorMain: #00bfa5;
+
+
+html,body{
+	height: 100%;
+	font-size: 100%;
+	min-height: 530px;
+}
+
+body{
+	font-family: $r-m, Helvetica, Arial, sans-serif;
+}
+
+::selection {
+	background: $colorMain; /* Safari */
+	color: $colorLight;
+}
+::-moz-selection {
+	background: $colorMain; /* Firefox */
+	color: $colorLight;
+}
+
+
+// pages
+
+#welcome-page{
+	min-height: 100vh;
+	height: 100%;
+	@include img($img + '/mountains.jpg');
+	background-size: cover;
+	position: relative;
+}
+
+
+
+// extends
+
+%slick{
+	@if($slick-blocks){
+		@include trans($slick-speed);
+	}
+	@else{
+		transition: none;
+	}
+}
