@@ -14,7 +14,7 @@ $socila_size : rem(26px);
 		display: inline-block;
 		width: $socila_size;
 		height: $socila_size;
-		margin-right: rem(27px);
+		margin-right: em(27px);
 		&:last-child{
 			margin-right: 0;
 		}
@@ -30,4 +30,78 @@ $socila_size : rem(26px);
 			fill: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 9.2157)
 		}
 	}	
+}
+
+.social--header{
+	.social__ico{
+		fill: rgba($colorLight,.5);
+		height: rem(18px);
+		width: rem(22px);
+		&:hover{
+			fill: rgba($colorLight,1);
+		}
+	}
+	.social__item{
+		margin-right: em(23px);
+	}
+}
+.social--footer{
+	.social__item{
+		padding: 10px;
+		cursor: pointer;
+		width: rem(35px);
+		height: rem(35px);
+		margin-right: em(8px);
+		border: 1px solid rgba($colorLight,.5);
+		border-radius: 50%;
+		position: relative;
+		left: 5px;
+		&:hover{
+			background-color: $colorLight;
+			.social__ico{
+				fill: darken(desaturate(adjust-hue($colorBase, 2.4633), 9.2523), 9.4118);
+			}
+		}
+		//fix
+		&:nth-child(3){
+			.social__ico{
+				top: 15px;
+				left: 17px;
+			}
+		}
+	}
+	.social__ico{
+		fill: rgba($colorLight,.5);
+		position: absolute;
+		width: 64%;
+		height: width;
+		@include center();
+	}
+}
+
+
+
+
+//============== width >= 768px ==============
+
+@include apply-to($tablet){
+	.social--header{
+		.social__ico{
+			height: rem(20px);
+			width: rem(32px);
+		}
+		.social__item{
+			margin-right: em(25px);
+		}
+	}
+}
+
+//============== width >= 1200px ==============
+
+@include apply-to($notebook){
+	.social--footer{
+		.social__item{
+			margin-bottom: 0;
+		}
+	}
 }

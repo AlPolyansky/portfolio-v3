@@ -1,0 +1,45 @@
+//============== width <= 320px ==============
+.footer{
+	background-color: darken(desaturate(adjust-hue($colorBase, 2.4633), 9.2523), 9.4118);
+	margin: 0;
+	padding-top: rem(31px);
+	padding-bottom: rem(9px);
+	overflow: hidden;
+}
+
+.footer__part{
+	&:nth-child(1){
+		margin-bottom: 15px;
+	}
+	&:nth-child(2){
+		margin-bottom: em(20px);
+	}
+}
+
+
+
+
+//============== width >= 1200px ==============
+
+@include apply-to($notebook){
+	.footer__top{
+		border-bottom: 1px solid rgba($colorLight,.1);
+		margin-bottom: rem(20px);
+		text-align-last: justify;
+		.footer__part{
+			vertical-align: top;
+			display: inline-block;
+			&:after{
+				width: 100%;
+				display: block;
+				content: '';
+			}
+		}
+	}
+	.footer__down{
+		.footer__part{
+			float: left;
+			width: 50%;
+		}
+	}
+}

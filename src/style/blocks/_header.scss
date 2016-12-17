@@ -1,0 +1,45 @@
+//============== width <= 320px ==============
+.header{
+	@include img($img + '/mountains.jpg');
+	background-size: cover;
+	min-height: 568px;
+	padding-top: rem(15px);
+	position: relative;
+	@extend %slick;
+}
+
+
+// cascade
+.header__top-line{
+	margin-bottom: rem(76px);
+	position: relative;
+	.social{
+		text-align: left;
+	}
+}
+
+
+//============== width >= 768px ==============
+
+@include apply-to($tablet){
+	.header{
+		padding-top: rem(32px);
+		min-height: 507px;
+	}
+	.header__top-line{
+		margin-bottom: rem(57px);
+	}
+}
+
+
+//============== width >= 1200px ==============
+
+@include apply-to($notebook){
+	.header{
+		padding-top: rem(32px);
+		min-height: 600px;
+	}
+	.header__top-line{
+		margin-bottom: rem(95px);
+	}
+}

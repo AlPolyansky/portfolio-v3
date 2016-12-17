@@ -1,5 +1,31 @@
 //============== width <= 320px ==============
 
+.button{
+	
+	background-color: $colorMain;
+	border-radius: 5px;
+	font-size: rem(14px);
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	&__link{
+		text-decoration: none;
+		color: $colorLight;
+		display: block;
+		padding: em(15px) em(20px);
+		@include trans(.1s);
+		&:hover{
+			background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 9.2157)
+		}
+	}
+	&__ico{
+		width: em(21px);
+		height: em(19px);
+		position: absolute;
+		fill: $colorLight;
+	}
+}
+
 .buttons{
 	width: 100%;
 	display: flex;
@@ -15,14 +41,27 @@
 	&__link{
 		background-color: $colorMain;
 		text-decoration: none;
-		color: $colorLight;
+		color: darken(saturate(adjust-hue($colorLight, 0.0000), 0.0000), 1.1765);
 		text-align: center;
 		width: 100%;
 		font-size: rem(14px);
 		padding: em(14px) em(20px);
-		@include trans(.1s);
-		&:hover{
-			background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 9.2157)
+	}
+}
+
+.button__ico--left{
+	left: em(10px);
+	top: em(13px);
+	& + .button__link{
+		padding-left: em(41px);
+	}
+}
+
+.slider{
+	.button{
+		margin-bottom: rem(30px);
+		&__ico{
+			margin-right: em(10px);
 		}
 	}
 }

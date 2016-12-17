@@ -1,7 +1,7 @@
 //============== width <= 320px ==============
 .cover{
 	width: rem(300px);
-  background-color: rgba($colorLight,0.85);
+  background-color: rgba(darken(saturate(adjust-hue($colorLight, 0.0000), 0.0000), 1.1765),0.85);
   border-radius: rem(5px);
   overflow: hidden;
   @extend %slick;

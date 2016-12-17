@@ -1,0 +1,24 @@
+//============== width <= 320px ==============
+.description{
+	color: $colorLight;
+}
+
+.description--footer{
+	color: rgba($colorLight,.5);
+	font-family: $r-l;
+	text-align: center;
+	font-size: rem(14px);
+	margin-bottom: em(15px);
+}
+
+
+//============== width >= 1200px ==============
+@include apply-to($notebook){
+	.description--footer{
+		text-align: left;
+		font-size: rem(16px);
+		max-width: rem(508px);
+	}
+}
+
+

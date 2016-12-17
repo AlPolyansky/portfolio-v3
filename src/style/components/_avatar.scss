@@ -16,3 +16,22 @@ $avatar-size: 141px;
   border-radius: 50%;
   margin: 0 auto;
 }
+
+
+// cascade
+
+
+.header__content{
+	.avatar{
+		margin-bottom: rem(29px);
+	}
+}
+
+//============== width >= 768px ==============
+@include apply-to($tablet){
+	.header__content{
+		.avatar{
+			margin-bottom: rem(25px);
+		}
+	}
+}

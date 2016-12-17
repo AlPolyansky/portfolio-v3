@@ -1,0 +1,47 @@
+//============== width <= 320px ==============
+.menu{
+	padding: 0;
+	margin: 0;
+	&__list{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+	&__item{
+		display: inline-block;
+		font-size: rem(14px);
+		padding: 0 em(5px);
+	}
+	&__link{
+		list-style: none;
+		color: $colorLight;
+		text-decoration: none;
+	}
+}
+
+
+
+//============== width >= 768px ==============
+
+@include apply-to($tablet){
+	.menu{
+		&__item{
+			font-size: rem(16px);
+			padding: 0 em(24px);
+		}
+	}
+}
+
+
+//============== width >= 1200px ==============
+
+@include apply-to($notebook){
+	.menu{
+		&__item{
+			&:first-child{
+				padding-left: 0;
+			}
+		}
+	}
+}

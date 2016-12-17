@@ -10,6 +10,7 @@ $desktop	: 1800px;
 // fonts
 $r-m : 'Roboto-Medium';
 $r-l :'Roboto Light';
+$b-r :'BERNIER Regular';
 
 //transition
 $slick-speed : .3s;
@@ -24,9 +25,12 @@ $img : '../img/';
 
 //colors
 
-$colorLight: #fcfcfc;
+$colorLight: #fff;
 $colorBase: #455a64;
 $colorMain: #00bfa5;
+$colorSliderDesk: #efebe0;
+$colorSliderInfo: #f0efe9;
+
 
 
 html,body{
@@ -37,6 +41,13 @@ html,body{
 
 body{
 	font-family: $r-m, Helvetica, Arial, sans-serif;
+}
+
+.container{
+	padding: 0 rem(11px);
+	@include apply-to($tablet){
+		padding: 0 rem(24px);
+	}
 }
 
 ::selection {

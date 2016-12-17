@@ -1,0 +1,43 @@
+//============== width <= 320px ==============
+
+
+.menu-button{
+	width: rem(25px);
+	position: absolute;
+	right: rem(7px);
+	top: rem(-2px);
+	cursor: pointer;
+	&__line{
+		display: block;
+		border-radius: 5px;
+		width: 100%;
+		height: rem(4px);
+		margin-bottom: rem(5px);
+		background-color: $colorLight;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+//============== width >= 768px ==============
+@include apply-to($tablet){
+	.menu-button{
+		width: rem(40px);
+		top: rem(-4px);
+		right: rem(23px);
+		&__line{
+			height: rem(5px);
+			margin-bottom: rem(10px);
+		}
+	}
+}
+
+
+//============== width >= 1200px ==============
+@include apply-to($notebook){
+	.menu-button{
+		right: rem(34px);
+	}
+}
