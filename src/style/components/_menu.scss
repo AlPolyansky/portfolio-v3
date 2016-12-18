@@ -7,6 +7,7 @@
 		margin: 0;
 		width: 100%;
 		text-align: center;
+
 	}
 	&__item{
 		display: inline-block;
@@ -17,6 +18,24 @@
 		list-style: none;
 		color: $colorLight;
 		text-decoration: none;
+		
+		position: relative;
+		&:after{
+			@include trans(.3s);
+			display: block;
+			content: '';
+			opacity: 0;
+			width: 1%;
+			height: 1px;
+			position: absolute;
+			background-color: $colorLight;
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+				width: 100%;
+			}
+		}
 	}
 }
 

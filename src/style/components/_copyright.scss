@@ -42,7 +42,7 @@
 
 
 //============== width >= 1200px ==============
-@include apply-to($tablet){
+@include apply-to($notebook){
 	.copyrigth--footer{
 		text-align: right;
 	}

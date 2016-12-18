@@ -1,115 +1,88 @@
-//============== width <= 320px ==============
-
 .title{
 	text-align: center;
-	font-size: rem(21px);
 	color: $colorBase;
 	@extend %slick;
 	position: relative;
-	&__svg{
-		@include center();
-		fill: rgba($colorBase,.07);
-		width: 200%;
-		height: 200%;
-	}
-	&__text{
-		display: block;
-	}
+	font-weight: normal;
 }
 
-.title--big{
-	font-size: rem(35px);
-}
 
-.title--small{
+//===== modificators blocks =====
+
+// size
+.title--size-s{
 	font-size: rem(14px);
-	color: rgba($colorBase, 0.8)
-}
-
-.title--dash{
-	font-family: $b-r;
-	display: inline-block;
-	.title__text{
-		position: relative;
-		display: block;
-		&:after,&:before{
-			content: '';
-			position: absolute;
-			display: block;
-			background-color: rgba($colorBase,.2);
-			height: rem(5px);
-			width: rem(22px);
-			top: 48%;
-		}
-		&:after{
-			left: rem(-38px);
-		}
-		&:before{	
-			right: rem(-38px);
-		}
-	}
-}
-
-// cascade
-
-.cover--welcome{
-	.title--medium{
-		margin-bottom: 10px;
-	}
-}
-
-.cover--welcome{
-	.title--medium{
-		margin-bottom: 10px;
-	}
-}
-
-.header__content{
-	.title{
-		color: $colorLight;
-	}
-	.title--medium{
-		margin-bottom: rem(9px);
-	}
-}
-
-.slider{
-	.title{
-		max-width: em(160px);
-		margin-bottom: em(20px);
-		&__text{
-			&:after{
-			left: rem(-10px);
-		}
-		&:before{	
-			right: rem(-10px);
-		}
-		}
-	}
-}
-
-
-//============== width >= 768px ==============
-@include apply-to($tablet){
-	.title--small{
+	@include apply-to($tablet){
 		font-size: rem(16px);
-	}
-	.title--medium{
-		font-size: rem(28px);
-	}
-	.header__content{
-		.title--medium{
-			font-size: rem(34px);
-		}
-	}
-	.title--dash{
+  }
+}
+
+.title--size-m{
+	font-size: rem(21px);
+	@include apply-to($tablet){
+		font-size: rem(35px);
+  }
+}
+
+.title--size-l{
+	font-size: rem(35px);
+	@include apply-to($tablet){
 		font-size: rem(49px);
+  }
+  @include apply-to($notebook){
+		font-size: rem(63px);
+  }
+}
+
+// color
+
+.title--light{
+	color: $colorLight;
+}
+
+// view
+
+.title--heading{
+	font-family: $b-r;
+}
+
+//===== modificators elements =====
+
+.title__text--dash{
+	display: table;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 em(20px);
+	&:after,&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		background-color: currentColor;
+		opacity: .2;
+		height: rem(5px);
+		width: rem(22px);
+		top: 50%;
+	}
+	&:after{
+		left: 0;
+	}
+	&:before{	
+		right: 0;
 	}
 }
 
-//============== width >= 768px ==============
-@include apply-to($notebook){
-	.title--dash{
-		font-size: rem(63px);
-	}
+.title__svg--back-side{
+	fill: currentColor;
+	position: absolute;
+	top: 30%;
+  left: 50%;
+	z-index: -1;
+	opacity: .07;
+	transform: translate(-50%, -50%) scale(0.9);
+  @include apply-to($tablet){
+		transform: translate(-50%, -50%) scale(1.4);
+  }
+  @include apply-to($notebook){
+  	transform: translate(-50%, -50%) scale(1.675);
+  }
 }

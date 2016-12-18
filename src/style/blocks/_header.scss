@@ -6,6 +6,10 @@
 	padding-top: rem(15px);
 	position: relative;
 	@extend %slick;
+	&__descr{
+		opacity: .8;
+		font-family: $r-l;
+	}
 }
 
 

@@ -37,10 +37,12 @@ html,body{
 	height: 100%;
 	font-size: 100%;
 	min-height: 530px;
+	min-width: 320px;
 }
 
 body{
 	font-family: $r-m, Helvetica, Arial, sans-serif;
+	background-color: darken(saturate(adjust-hue($colorLight, 48.0000), 50.0000), 3.9216)
 }
 
 .container{

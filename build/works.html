@@ -40,8 +40,8 @@
   </div>
   <div class="header__content">
     <div class="avatar avatar-rounder"><img class="avatar__img" src="./img/avatar.jpg"/></div>
-    <div class="title title--medium">Владислав Астахов</div>
-    <div class="title title--small">Личный сайт веб разработчика</div>
+    <div class="title title--size-m title--light">Владислав Астахов</div>
+    <div class="title title--size-s title--light header__descr">Личный сайт веб разработчика</div>
   </div>
   <div class="arrow arrow--down">
     <svg class="arrow__ico">
@@ -56,25 +56,47 @@
   </div>
 </header>
 <div class="content">
-  <section class="s-works">
-    <h2 class="title title--big title--dash">
-      <svg class="title__svg">
-        <use xlink:href="./img/sprite.svg#works_header"></use>
-      </svg><span class="title__text">Мои работы</span>
-    </h2>
+  <section class="section section--works">
+    <div class="section__title">
+      <h2 class="title title--heading title--size-l"><span class="title__text title__text--dash">Мои работы</span>
+        <svg class="title__svg title__svg--back-side">
+          <use xlink:href="./img/sprite.svg#works_header"></use>
+        </svg>
+      </h2>
+    </div>
     <div class="slider">
-      <div class="slider__desc">
+      <div class="slider__info">
+        <div class="slider__info-in">
+          <h3 class="title title--heading title--size-m slider__title"><span class="title__text title__text--dash">Сайт школы онлайн образования</span></h3>
+          <div class="slider__skills"><span class="slider__slills__text">HTML , CSS, JAVASCRIPT</span></div>
+          <div class="button">
+            <svg class="button__ico button__ico--left">
+              <use xlink:href="./img/sprite.svg#link"></use>
+            </svg><a class="button__link" href="#" target="_blank" title="Посмотреть сайт"><span class="button__text">Посмотреть сайт</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="slider__view">
         <ul class="slider__list">
-          <li class="slider__item"></li>
+          <li class="slider__item" style="background-image: url(./img/work-2.png)"></li>
         </ul>
       </div>
-      <div class="slider__info">
-        <div class="title title--dash"> <span class="title__text">Сайт школы онлайн образования</span></div>
-        <div class="slider__skills"><span class="slider__slills__text">HTML , CSS, JAVASCRIPT</span></div>
-        <div class="button">
-          <svg class="button__ico button__ico--left">
-            <use xlink:href="./img/sprite.svg#link"></use>
-          </svg><a class="button__link" href="#" target="_blank" title="Посмотреть сайт">Посмотреть сайт</a>
+      <div class="slider__control">
+        <div class="slider__button">
+          <svg class="slider__button-ico">
+            <use xlink:href="./img/sprite.svg#arrow_down"></use>
+          </svg>
+          <ul class="slider__list">
+            <li class="slider__item" style="background-image: url(./img/work-3.png)"></li>
+          </ul>
+        </div>
+        <div class="slider__button">
+          <svg class="slider__button-ico slider__ico--rotate">
+            <use xlink:href="./img/sprite.svg#arrow_down"></use>
+          </svg>
+          <ul class="slider__list">
+            <li class="slider__item" style="background-image: url(./img/work-4.png)"></li>
+          </ul>
         </div>
       </div>
     </div>

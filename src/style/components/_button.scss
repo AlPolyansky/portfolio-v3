@@ -8,15 +8,15 @@
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+	&:hover{
+		background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 3)
+	}
 	&__link{
 		text-decoration: none;
 		color: $colorLight;
 		display: block;
 		padding: em(15px) em(20px);
 		@include trans(.1s);
-		&:hover{
-			background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 9.2157)
-		}
 	}
 	&__ico{
 		width: em(21px);
@@ -73,6 +73,22 @@
 		&__link{
 			font-size: rem(16px);
 			padding: em(15px) em(20px);
+		}
+	}
+	.slider{
+		.button{
+			&__link{
+				position: relative;
+				padding: em(15px) em(50px);
+				left: em(8px);
+			}
+			&__ico{
+				width: em(28px);
+				height: em(22px);
+			}
+			.button__ico--left{
+				left: em(20px);
+			}
 		}
 	}
 }
