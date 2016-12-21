@@ -18,12 +18,18 @@ var notify = require('gulp-notify');
 var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
 var flexbugs = require('postcss-flexbugs-fixes');
+var mqpacker = require("css-mqpacker");
 
 var proccessors = [
   cssnext(),
   flexbugs(),
+  mqpacker({
+    sort: true
+  })
 ]
 
+
+var reload      = browserSync.reload;
 
 // =====================  Настройки  =====================
 
@@ -129,6 +135,7 @@ var mainJs = [
   path.sourse.folder + '/' + path.sourse.js + '/modules/_base.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_common.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_menu.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_parallax.js',
   path.sourse.folder + '/' + path.sourse.js + '/app.js',
 ];
 
@@ -252,7 +259,8 @@ gulp.task('script', function (callback) {
     //.pipe(browserify()).on('error', notify.onError({title: 'JS'}))
     .pipe(concat(path.build.js_file))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.build.folder + '/' + path.build.js));
+    .pipe(gulp.dest(path.build.folder + '/' + path.build.js))
+    .pipe(reload({stream:true}));
 
   // Тут можно продолжить таск, если нужно чтобы было несколько склееных файлов js
 
@@ -292,7 +300,7 @@ gulp.task('watch', function () {
   if(start == 'server'){
     gulp.watch(path.sourse.views + '/**/*.pug', gulp.series('pug', 'reload'));
   }
-  gulp.watch(path.sourse.folder + '/js/**/*.js', gulp.series('script', 'reload'));
+  gulp.watch(path.sourse.folder + '/js/**/*.js', gulp.series('script'));
 });
 
 

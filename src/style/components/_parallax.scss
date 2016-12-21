@@ -1,0 +1,43 @@
+.parallax{
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-image: url("../img/parallax/layer-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.parallax__layer{
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  width: 105%;
+  height: 105%;
+  margin-left: -52.5%;
+  transition: transform .1s linear;
+  & img{
+  	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+  }
+  &--04{
+  	left: 120%;
+    bottom: 60%;
+    width: 10%;
+  }
+  &--06{
+  	left: 80%;
+    bottom: 45%;
+    width: 25%;
+  }
+  &--09{
+  	left: 30%;
+    bottom: -10%;
+    width: 80%;
+  }
+}
