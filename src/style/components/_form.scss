@@ -1,0 +1,26 @@
+.form{
+	font-family: $r-r;
+	&__input{
+		width: 100%;
+		height: rem(46px);
+		margin-bottom: em(20px);
+		font-size: rem(14px);
+	}
+	&__textarea{
+		width: 100%;
+		height: rem(140px);
+		resize: none;
+	}
+	&__part{
+		outline: none;
+		border: none;
+		padding: em(20px);
+		color: $colorBase;
+	}
+}
+
+.form--rounded{
+	.form__part{
+		border-radius: 5px;
+	}
+}

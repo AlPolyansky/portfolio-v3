@@ -1,0 +1,33 @@
+
+$avatar-size-xs : 70px;
+$avatar-size-s : 80px;
+
+.recall{
+	text-align: left;
+	padding-bottom: em(30px);
+	display: flex;
+	flex-direction: column;
+	&__content{
+		flex: 1 0 auto;
+	}
+	&__user{
+	}
+	&__ico {
+		display: block;
+		fill: $colorBase;
+		opacity: .2;
+		width: 	rem(28px);
+		height: rem(35px);
+		margin: 0 auto em(10px);
+		@include apply-to($tablet){
+			margin: 0 0 em(10px);
+		}
+	}
+	&__text{
+		text-align: left;
+		color: $colorBase;
+		font-family: $r-r;
+		margin-bottom: rem(15px);
+		line-height: em(26px);
+	}
+}

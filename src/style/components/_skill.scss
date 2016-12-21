@@ -1,0 +1,88 @@
+// ================== 1800 width ================== //
+
+$size: 118px;
+$innerSize: 78px;
+$activeColor: $colorMain;
+$percent: 0;
+$bgColor: lighten(desaturate(adjust-hue(#00bfa5, -129.8325), 86.4865), 48.0392);
+
+.skill {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  position: relative;
+  &__wrap{
+    transform: rotate(-90deg);
+    border-radius: 50%;
+  }
+  &__circle{
+    stroke: $activeColor;
+    fill: $bgColor;
+    @include trans(.5s);
+    stroke-width: 32;
+    stroke-dasharray: $percent 100;
+  }
+}
+
+
+
+
+// INNER
+.skill__inner{
+  background-color: darken(saturate(adjust-hue($colorLight, 48.0000), 30.6122), 9.6078);  text-align: center;
+  height: $innerSize;
+  width: $innerSize;
+  position: absolute;
+  border-radius: 50%;
+  @include center();
+  .skill__text {
+    color: $colorMain;
+  	@include center();
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+
+/* // ================== width < 1800px ================== //
+
+
+@include apply-to($l - 1,max){
+
+
+  $size: 114px;
+
+  .skill{
+    width: $size;
+    height: $size;
+  }
+
+}
+
+
+// ================== width < 1200px ================== //
+
+
+@include apply-to($m - 1,max){
+
+
+  $size: 110px;
+  $innerSize: 69px;
+
+  .skill{
+    width: $size;
+    height: $size;
+  }
+
+  .skill__inner{
+  height: $innerSize;
+  width: $innerSize;
+    .skill__text {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+} */
+

@@ -10,9 +10,12 @@ $avatar-size: 141px;
   }
 }
 
-.avatar-rounder{
+.avatar--size-s{
 	width: rem($avatar-size);
   height: rem($avatar-size);
+}
+
+.avatar-rounder{
   border-radius: 50%;
   margin: 0 auto;
 }

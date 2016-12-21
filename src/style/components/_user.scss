@@ -1,0 +1,29 @@
+.user{
+	&__avatar{
+		width: rem($avatar-size-xs);
+		height: rem($avatar-size-xs);
+		margin: 0;
+		margin-right: em(20px);
+		display: inline-block;
+		vertical-align: middle;
+		@include apply-to($tablet){
+			width: rem($avatar-size-s);
+			height: rem($avatar-size-s);
+		}
+	}
+	&__person{
+		text-align: left;
+		vertical-align: middle;
+		display: inline-block;
+		color: $colorMain;
+	}
+	&__person-name{
+		font-size: rem(14px);
+		font-family: $r-b;
+		padding-bottom: em(5px);
+	}
+	&__person-work{
+		font-family: $r-r;
+		font-size: rem(14px);
+	}
+}

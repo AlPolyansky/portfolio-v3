@@ -8,8 +8,10 @@ $notebook : 1200px;
 $desktop	: 1800px;
 
 // fonts
+$r-r :'Roboto-Regular';
 $r-m : 'Roboto-Medium';
-$r-l :'Roboto Light';
+$r-l :'Roboto-Light';
+$r-b :'Roboto-Bold';
 $b-r :'BERNIER Regular';
 
 //transition
@@ -38,6 +40,7 @@ html,body{
 	font-size: 100%;
 	min-height: 530px;
 	min-width: 320px;
+	margin: 0;
 }
 
 body{
@@ -45,6 +48,9 @@ body{
 	background-color: darken(saturate(adjust-hue($colorLight, 48.0000), 50.0000), 3.9216)
 }
 
+.wrapper{
+	position: relative;
+}
 .container{
 	padding: 0 rem(11px);
 	@include apply-to($tablet){

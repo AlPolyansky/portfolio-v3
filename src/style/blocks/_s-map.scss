@@ -1,0 +1,32 @@
+.s-map{
+	height: 100vh;
+	min-height: rem(648px);
+	//position: relative;
+	background-color: red;
+	@include apply-to($tablet){
+		min-height: rem(948px);
+	}
+	&__cover{
+		width: 100%;
+		padding: rem(30px) 5%;
+		margin: 0 auto;
+		background-color: $colorLight;
+		@extend %slick;
+		@include apply-to($tablet){
+			max-width: rem(348px);
+			position: absolute;
+			background-color: rgba($colorLight,.85);
+			top: 50%;
+			left: 50%;
+    	transform: translate(-50%, -50%);
+    	padding: rem(36px) rem(30px);
+		}
+		@include apply-to($notebook){
+			max-width: rem(380px);
+			padding: rem(36px) rem(40px);
+		}
+	}
+	&__title{
+		margin-bottom: em(20px);
+	}
+}

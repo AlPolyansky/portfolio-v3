@@ -10,140 +10,219 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./css/foundation.css">
     <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/foundation.js" defer></script>
+    <script src="./js/app.js" defer></script>
   </head>
   <body>
     <div class="wrapper" id="works-page">
+      <header class="header">
+        <div class="header__top-line">
+          <div class="container">
+            <div class="social social--header">
+              <ul class="social__list">
+                <div class="social__item"><a class="social__link" href="#" title="Вконтакте" target="_blank">
+                    <svg class="social__ico">
+                      <use xlink:href="./img/sprite.svg#vk"></use>
+                    </svg></a></div>
+                <div class="social__item"><a class="social__link" href="#" title="github" target="_blank">
+                    <svg class="social__ico">
+                      <use xlink:href="./img/sprite.svg#github"></use>
+                    </svg></a></div>
+                <div class="social__item"><a class="social__link" href="#" title="linkedin" target="_blank">
+                    <svg class="social__ico">
+                      <use xlink:href="./img/sprite.svg#in"></use>
+                    </svg></a></div>
+              </ul>
+            </div>
+            <div class="menu-button"><span class="menu-button__line"></span><span class="menu-button__line"></span><span class="menu-button__line"></span></div>
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="avatar avatar--size-s square header__avatar"><img class="avatar__img" src="./img/avatar.jpg"/></div>
+          <div class="title title--size-m title--light">Владислав Астахов</div>
+          <div class="title title--size-s title--light header__descr">Личный сайт веб разработчика</div>
+        </div>
+        <div class="arrow header__button-down"><a class="arrow__link" href="#" title="Мои работы">
+            <svg class="arrow__ico header__button-ico">
+              <use xlink:href="./img/sprite.svg#arrow_down"></use>
+            </svg></a></div>
+        <div class="header__angle">
+          <svg class="header__angle__svg" version="1.1" xml:space="preserve" viewbox="0 0 100 160" preserveaspectratio="none">
+            <polygon class="header__angle__left-triangle" points="0,0 50.1,160 50.1,220 0,220 0,160"></polygon>
+            <polygon class="header__angle__right-triangle" points="49.9,160 100,0 100,160 100,220 49.9,220"></polygon>
+          </svg>
+        </div>
+      </header>
+      <div class="content">
+        <section class="section section--works">
+          <div class="section__title">
+            <h2 class="title title--heading title--size-l"><span class="title__text title__text--dash">Мои работы</span>
+              <svg class="title__svg title__svg--back-side">
+                <use xlink:href="./img/sprite.svg#works_header"></use>
+              </svg>
+            </h2>
+          </div>
+          <div class="slider">
+            <div class="slider__info">
+              <div class="slider__info-in">
+                <h3 class="title title--heading title--size-m slider__title"><span class="title__text title__text--dash">Сайт школы онлайн образования</span></h3>
+                <div class="slider__skills"><span class="slider__slills__text">HTML , CSS, JAVASCRIPT</span></div><a class="button slider__info-button button--rounded" href="#" target="_blank" title="Посмотреть сайт">
+                  <svg class="button__ico slider__info-ico">
+                    <use xlink:href="./img/sprite.svg#link"></use>
+                  </svg><span class="button__text slider__info-button-text">Посмотреть сайт</span></a>
+              </div>
+            </div>
+            <div class="slider__view">
+              <ul class="slider__list">
+                <li class="slider__item" style="background-image: url(./img/work-2.png)"></li>
+              </ul>
+            </div>
+            <div class="slider__control">
+              <div class="slider__button">
+                <svg class="slider__button-ico">
+                  <use xlink:href="./img/sprite.svg#arrow_down"></use>
+                </svg>
+                <ul class="slider__list">
+                  <li class="slider__item" style="background-image: url(./img/work-3.png)"></li>
+                </ul>
+              </div>
+              <div class="slider__button">
+                <svg class="slider__button-ico slider__ico--rotate">
+                  <use xlink:href="./img/sprite.svg#arrow_down"></use>
+                </svg>
+                <ul class="slider__list">
+                  <li class="slider__item" style="background-image: url(./img/work-4.png)"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--about">
+          <div class="section__bg"></div>
+          <div class="section__title">
+            <h2 class="title title--heading title--size-l"><span class="title__text title__text--dash">Что обо мне говорят</span>
+              <svg class="title__svg title__svg--back-side">
+                <use xlink:href="./img/sprite.svg#about_header"></use>
+              </svg>
+            </h2>
+          </div>
+          <div class="section__recall">
+            <div class="container">
+              <div class="recall">
+                <div class="recall__content">
+                  <div class="recall__quote">
+                    <svg class="recall__ico">
+                      <use xlink:href="./img/sprite.svg#quote-left"></use>
+                    </svg>
+                  </div>
+                  <div class="recall__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+                </div>
+                <div class="recall__user"></div>
+                <div class="user">
+                  <div class="avatar user__avatar avatar-rounder"><img class="avatar__img" src="./img/man-1.png"/></div>
+                  <div class="user__person">
+                    <div class="user__person-name">Ковальчук Дмитрий</div><small class="user__person-work">основатель Loftschool</small>
+                  </div>
+                </div>
+              </div>
+              <div class="recall">
+                <div class="recall__content">
+                  <div class="recall__quote">
+                    <svg class="recall__ico">
+                      <use xlink:href="./img/sprite.svg#quote-left"></use>
+                    </svg>
+                  </div>
+                  <div class="recall__text">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+                </div>
+                <div class="recall__user">
+                  <div class="user">
+                    <div class="avatar user__avatar avatar-rounder"><img class="avatar__img" src="./img/man-2.png"/></div>
+                    <div class="user__person">
+                      <div class="user__person-name">Зар Захаров</div><small class="user__person-work">преподаватель</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__send-me">
+            <div class="cover cover--send-me cover--blur cover--rounded">
+              <h4 class="title title--heading title--size-m cover__title"><span class="title__text title__text--dash">Связаться со мной</span></h4>
+              <form class="form form--rounded" method="POST" action="">
+                <div class="cover__part cover__fieds">
+                  <input class="form__part form__input" type="text" name="name" placeholder="Имя">
+                  <input class="form__part form__input" type="text" name="mail" placeholder="Email">
+                  <textarea class="form__part form__textarea" placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="cover__part">
+                  <div class="cover__button">
+                    <button class="button cover__button-item" type="submit" title="Отправить">Отправить</button>
+                    <button class="button cover__button-item" type="reset" title="Очистить">Очистить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="section__button-up">
+            <div class="arrow"><a class="arrow__link" href="#" title="Мои работы">
+                <svg class="arrow__ico slider__ico--rotate">
+                  <use xlink:href="./img/sprite.svg#arrow_down"></use>
+                </svg></a></div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="footer__part">
+              <nav class="menu footer__nav">
+                <ul class="menu__list">
+                  <li class="menu__item"><a class="menu__link" href="/works.html" title="Мои работы">Мои работы</a></li>
+                  <li class="menu__item"><a class="menu__link" href="/about.html" title="Обо мне">Обо мне</a></li>
+                  <li class="menu__item"><a class="menu__link" href="/" title="Главная">Главная</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__part">
+              <div class="social social--border square footer__social social--light">
+                <ul class="social__list">
+                  <div class="social__item"><a class="social__link" href="#" title="Вконтакте" target="_blank">
+                      <svg class="social__ico">
+                        <use xlink:href="./img/sprite.svg#vk"></use>
+                      </svg></a></div>
+                  <div class="social__item"><a class="social__link" href="#" title="github" target="_blank">
+                      <svg class="social__ico">
+                        <use xlink:href="./img/sprite.svg#github"></use>
+                      </svg></a></div>
+                  <div class="social__item"><a class="social__link" href="#" title="linkedin" target="_blank">
+                      <svg class="social__ico">
+                        <use xlink:href="./img/sprite.svg#in"></use>
+                      </svg></a></div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__down">
+          <div class="container">
+            <div class="footer__part">
+              <div class="description description--footer">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+            </div>
+            <div class="footer__part">
+              <div class="copyright copyrigth--footer">Владимир Астахов | создано с любовью в LoftSchool | 2016</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="menu--popup">
+      <nav class="menu menu--popup__nav">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link" href="/works.html" title="Мои работы">Мои работы</a></li>
+          <li class="menu__item"><a class="menu__link" href="/about.html" title="Обо мне">Обо мне</a></li>
+          <li class="menu__item"><a class="menu__link" href="/" title="Главная">Главная</a></li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
-<header class="header">
-  <div class="header__top-line">
-    <div class="container">
-      <div class="social social--header">
-        <ul class="social__list">
-          <div class="social__item"><a class="social__link" href="#" title="Вконтакте" target="_blank">
-              <svg class="social__ico">
-                <use xlink:href="./img/sprite.svg#vk"></use>
-              </svg></a></div>
-          <div class="social__item"><a class="social__link" href="#" title="github" target="_blank">
-              <svg class="social__ico">
-                <use xlink:href="./img/sprite.svg#github"></use>
-              </svg></a></div>
-          <div class="social__item"><a class="social__link" href="#" title="linkedin" target="_blank">
-              <svg class="social__ico">
-                <use xlink:href="./img/sprite.svg#in"></use>
-              </svg></a></div>
-        </ul>
-      </div>
-      <div class="menu-button"><span class="menu-button__line"></span><span class="menu-button__line"></span><span class="menu-button__line"></span></div>
-    </div>
-  </div>
-  <div class="header__content">
-    <div class="avatar avatar-rounder"><img class="avatar__img" src="./img/avatar.jpg"/></div>
-    <div class="title title--size-m title--light">Владислав Астахов</div>
-    <div class="title title--size-s title--light header__descr">Личный сайт веб разработчика</div>
-  </div>
-  <div class="arrow arrow--down">
-    <svg class="arrow__ico">
-      <use xlink:href="./img/sprite.svg#arrow_down"></use>
-    </svg>
-  </div>
-  <div class="header__angle">
-    <svg class="header__angle__svg" version="1.1" xml:space="preserve" viewbox="0 0 100 160" preserveaspectratio="none">
-      <polygon class="header__angle__left-triangle" points="0,0 50.1,160 50.1,220 0,220 0,160"></polygon>
-      <polygon class="header__angle__right-triangle" points="49.9,160 100,0 100,160 100,220 49.9,220"></polygon>
-    </svg>
-  </div>
-</header>
-<div class="content">
-  <section class="section section--works">
-    <div class="section__title">
-      <h2 class="title title--heading title--size-l"><span class="title__text title__text--dash">Мои работы</span>
-        <svg class="title__svg title__svg--back-side">
-          <use xlink:href="./img/sprite.svg#works_header"></use>
-        </svg>
-      </h2>
-    </div>
-    <div class="slider">
-      <div class="slider__info">
-        <div class="slider__info-in">
-          <h3 class="title title--heading title--size-m slider__title"><span class="title__text title__text--dash">Сайт школы онлайн образования</span></h3>
-          <div class="slider__skills"><span class="slider__slills__text">HTML , CSS, JAVASCRIPT</span></div>
-          <div class="button">
-            <svg class="button__ico button__ico--left">
-              <use xlink:href="./img/sprite.svg#link"></use>
-            </svg><a class="button__link" href="#" target="_blank" title="Посмотреть сайт"><span class="button__text">Посмотреть сайт</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="slider__view">
-        <ul class="slider__list">
-          <li class="slider__item" style="background-image: url(./img/work-2.png)"></li>
-        </ul>
-      </div>
-      <div class="slider__control">
-        <div class="slider__button">
-          <svg class="slider__button-ico">
-            <use xlink:href="./img/sprite.svg#arrow_down"></use>
-          </svg>
-          <ul class="slider__list">
-            <li class="slider__item" style="background-image: url(./img/work-3.png)"></li>
-          </ul>
-        </div>
-        <div class="slider__button">
-          <svg class="slider__button-ico slider__ico--rotate">
-            <use xlink:href="./img/sprite.svg#arrow_down"></use>
-          </svg>
-          <ul class="slider__list">
-            <li class="slider__item" style="background-image: url(./img/work-4.png)"></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<footer class="footer">
-  <div class="footer__top">
-    <div class="container">
-      <div class="footer__part">
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="#" title="Мои работы">Мои работы</a></li>
-            <li class="menu__item"><a class="menu__link" href="#" title="Обо мне">Обо мне</a></li>
-            <li class="menu__item"><a class="menu__link" href="#" title="Блог">Блог</a></li>
-            <li class="menu__item"><a class="menu__link" href="/" title="Главная">Главная</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__part">
-        <div class="social social--footer">
-          <ul class="social__list">
-            <div class="social__item"><a class="social__link" href="#" title="Вконтакте" target="_blank">
-                <svg class="social__ico">
-                  <use xlink:href="./img/sprite.svg#vk"></use>
-                </svg></a></div>
-            <div class="social__item"><a class="social__link" href="#" title="github" target="_blank">
-                <svg class="social__ico">
-                  <use xlink:href="./img/sprite.svg#github"></use>
-                </svg></a></div>
-            <div class="social__item"><a class="social__link" href="#" title="linkedin" target="_blank">
-                <svg class="social__ico">
-                  <use xlink:href="./img/sprite.svg#in"></use>
-                </svg></a></div>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer__down">
-    <div class="container">
-      <div class="footer__part">
-        <div class="description description--footer">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
-      </div>
-      <div class="footer__part">
-        <div class="copyrigth copyrigth--footer"><span class="copyrigth__text"> 
-            <div class="copyrigth__name">Владимир Астахов | создано с любовью в LoftSchool | 2016</div></span></div>
-      </div>
-    </div>
-  </div>
-</footer>

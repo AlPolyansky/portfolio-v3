@@ -1,0 +1,27 @@
+// Componetns
+
+.components{
+	color: $colorLight;
+	text-align: left;
+	&__head{
+		background-color: $colorMain;
+		margin: 0;
+		padding: 10px 30px;
+	}
+	&__list{
+		margin: 10px auto;
+		padding: 0;
+		max-width: 480px;
+		list-style-type: none;
+	}
+	&__item{
+		padding: 10px;
+		border: 1px solid $colorBase;
+		color: $colorBase;
+	}
+}
+
+.components--dark{
+	background-color: $colorBase;
+	color: $colorLight;
+}

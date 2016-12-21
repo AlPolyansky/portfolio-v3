@@ -1,0 +1,102 @@
+
+.section{
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	&__title{
+		max-width: rem(250px);
+		width: 100%;
+		margin: 0 auto;
+		@include apply-to($tablet){
+			max-width: rem(500px);
+		}
+	}
+	&__button-up{
+		display: block;
+		position: relative;
+	}
+	&__send-me{
+		.cover{
+			margin: 0 auto;
+		}
+		margin-bottom: rem(50px);
+		@include apply-to($tablet){
+			margin-bottom: rem(100px);
+		}
+		@include apply-to($notebook){
+			margin-bottom: rem(70px);
+		}	
+	}
+	&__right{
+		background-color: red;
+		@include col(6);
+	}
+	&__left{
+		background-color: blue;
+		@include col(6);
+	}
+	&__recall{
+		@include clear;
+		max-width: rem(500px);
+		margin: 0 auto;
+		@include apply-to($tablet){
+			max-width: rem(820px);
+		}	
+		.container{
+			@include apply-to($tablet){
+				display: flex;
+			}	
+		}
+		.recall{
+			width: 100%;
+			@include apply-to($tablet){
+				width: 50%;
+				float: left;
+				padding-right: rem(30px);
+			}
+		}
+	}
+	&__bg{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		background-image: url("../img/bg-sea.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-width: rem(1500px);
+	}
+}
+
+
+.section--works,.section--about{
+	padding-top: em(40px);
+	.section__title{
+		margin-bottom: em(60px);
+	}
+}
+
+.section--works{
+	padding-top: em(50px);
+}
+.section--about{
+	padding-top: em(80px);
+	overflow: hidden;
+}
+
+.section--about{
+	position: relative;
+	padding-bottom: rem(40px);
+	@include apply-to($tablet){
+		padding-bottom: rem(50px);
+	}
+	@include apply-to($notebook){
+		padding-bottom: rem(70px);
+	}	
+}
+
+.section--skills{
+	height: rem(835px);
+}

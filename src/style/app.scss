@@ -3,17 +3,13 @@
 // base
 @import 'core/_base.scss';
 @import 'core/_fonts.scss';
+@import 'core/_components.scss';
 
-// blocks
-@import 'blocks/_cover.scss';
-@import 'blocks/_header.scss';
-@import 'blocks/_content.scss';
-@import 'blocks/_footer.scss';
-@import 'blocks/_section-works.scss';
-@import 'blocks/_section-about.scss';
-@import 'blocks/_slider.scss';
+
+
 
 // components
+@import 'components/_commons.scss';
 @import 'components/_avatar.scss';
 @import 'components/_title.scss';
 @import 'components/_social.scss';
@@ -24,3 +20,20 @@
 @import 'components/_angle.scss';
 @import 'components/_menu.scss';
 @import 'components/_description.scss';
+@import 'components/_recall.scss';
+@import 'components/_user.scss';
+@import 'components/_form.scss';
+@import 'components/_skill.scss';
+@import 'components/_contacts.scss';
+
+
+
+// blocks
+@import 'blocks/_slider.scss';
+@import 'blocks/_cover.scss';
+@import 'blocks/_header.scss';
+@import 'blocks/_content.scss';
+@import 'blocks/_footer.scss';
+@import 'blocks/_section.scss';
+@import 'blocks/_s-skills.scss';
+@import 'blocks/_s-map.scss';

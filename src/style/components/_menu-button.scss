@@ -7,6 +7,7 @@
 	right: rem(7px);
 	top: rem(-2px);
 	cursor: pointer;
+	z-index: 100000;
 	&__line{
 		display: block;
 		border-radius: 5px;
@@ -14,11 +15,14 @@
 		height: rem(4px);
 		margin-bottom: rem(5px);
 		background-color: $colorLight;
+		@include trans(.3s);
 		&:last-child{
 			margin-bottom: 0;
 		}
 	}
 }
+
+
 
 
 //============== width >= 768px ==============
@@ -41,3 +45,27 @@
 		right: rem(34px);
 	}
 }
+
+.menu-button--active{
+	position: fixed;
+	top: rem(30px);
+	.menu-button__line{
+		&:nth-child(1){
+			transform: rotate(45deg);
+			position: relative;
+			top: rem(4px);
+			@include apply-to($tablet){
+				top: rem(10px);
+			}
+		}
+		&:nth-child(2){
+			transform: rotate(-45deg);
+			position: relative;
+			top: rem(-5px);
+		}
+		&:nth-child(3){
+			opacity: 0;
+		}
+	}
+}
+

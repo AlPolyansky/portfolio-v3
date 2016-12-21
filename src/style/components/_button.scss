@@ -1,23 +1,26 @@
 //============== width <= 320px ==============
 
 .button{
-	
 	background-color: $colorMain;
-	border-radius: 5px;
 	font-size: rem(14px);
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
+	padding: rem(10px) rem(20px);
+	color: $colorLight;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	text-align: center;
 	&:hover{
 		background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 3)
 	}
-	&__link{
-		text-decoration: none;
-		color: $colorLight;
+/* 	&__link{
 		display: block;
 		padding: em(15px) em(20px);
 		@include trans(.1s);
-	}
+	} */
 	&__ico{
 		width: em(21px);
 		height: em(19px);
@@ -25,6 +28,14 @@
 		fill: $colorLight;
 	}
 }
+
+.button--rounded{
+	border-radius: 5px;
+}
+
+/* .button--rounded{
+	border-radius: 5px;
+} */
 
 .buttons{
 	width: 100%;
@@ -39,6 +50,8 @@
 		}
 	}
 	&__link{
+		border: none;
+		outline: none;
 		background-color: $colorMain;
 		text-decoration: none;
 		color: darken(saturate(adjust-hue($colorLight, 0.0000), 0.0000), 1.1765);
@@ -46,6 +59,10 @@
 		width: 100%;
 		font-size: rem(14px);
 		padding: em(14px) em(20px);
+		border-right: rem(2px) solid rgba($colorLight,.5);
+		&:last-child{
+			border-right: none;
+		}
 	}
 }
 
@@ -57,14 +74,14 @@
 	}
 }
 
-.slider{
+/* .slider{
 	.button{
 		margin-bottom: rem(30px);
 		&__ico{
 			margin-right: em(10px);
 		}
 	}
-}
+} */
 
 
 //============== width >= 768px ==============

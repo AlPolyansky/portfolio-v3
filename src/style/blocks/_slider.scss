@@ -66,6 +66,21 @@
 			max-width: rem(420px);
 		}
 	}
+	&__info-button{
+		width: rem(200px);
+	}
+	&__info-ico{
+		position: absolute;
+		left: em(30px);
+		@include apply-to($tablet){
+			left: em(25px);
+			top: 8px;
+		}
+	}
+	&__info-button-text{
+		padding-left: em(20px);
+	}
+
 	&__title{
 		max-width: rem(242px);
 		margin: 0 auto em(20px);
@@ -73,6 +88,7 @@
 			max-width: rem(480px);
 		}
 	}
+
 	&__skills{
 		color: $colorMain;
 		display: block;

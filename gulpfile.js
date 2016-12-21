@@ -12,16 +12,15 @@ var cheerio = require('gulp-cheerio');
 var replace = require('gulp-replace');
 var svgSprite = require('gulp-svg-sprite');
 var sourcemaps = require('gulp-sourcemaps');
-var eslint = require('gulp-eslint');
 var notify = require('gulp-notify');
+//var browserify = require('gulp-browserify');
 // postcss
 var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
-var lost = require('lost');
 var flexbugs = require('postcss-flexbugs-fixes');
+
 var proccessors = [
   cssnext(),
-  lost(),
   flexbugs(),
 ]
 
@@ -101,6 +100,7 @@ var scssLibs = [
 var jsLibs = [
   // Пример:  path.sourse.folder + '/jquery/dist/jquery.js',
   path.sourse.libs + '/jquery/dist/jquery.min.js',
+  path.sourse.libs + '/svg4everybody/dist/svg4everybody.js',
 ];
 
 
@@ -126,8 +126,10 @@ var sassCompile = [
 // Тут пишем пути к модулям js, чтобы они превратились в единый файл app.js (название файла береться из конфига)
 // Важен порядок файлов
 var mainJs = [
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_base.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_common.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_menu.js',
   path.sourse.folder + '/' + path.sourse.js + '/app.js',
-
 ];
 
 
@@ -242,11 +244,12 @@ gulp.task('copy', function (callback) {
 
 // Склеиваем Js модули
 
-gulp.task('concat', function (callback) {
+gulp.task('script', function (callback) {
 
   // main-page.js
   gulp.src(mainJs)
     .pipe(sourcemaps.init())
+    //.pipe(browserify()).on('error', notify.onError({title: 'JS'}))
     .pipe(concat(path.build.js_file))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.folder + '/' + path.build.js));
@@ -289,7 +292,7 @@ gulp.task('watch', function () {
   if(start == 'server'){
     gulp.watch(path.sourse.views + '/**/*.pug', gulp.series('pug', 'reload'));
   }
-  gulp.watch(path.sourse.folder + '/js/**/*.js', gulp.series('concat', 'reload'));
+  gulp.watch(path.sourse.folder + '/js/**/*.js', gulp.series('script', 'reload'));
 });
 
 
@@ -310,7 +313,7 @@ gulp.task('build', gulp.series(
       'pug',
       'css-libs',
       'js-libs',
-      'concat',
+      'script',
       'svg-sprite',
       'copy'
     )

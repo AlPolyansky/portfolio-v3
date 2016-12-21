@@ -1,0 +1,118 @@
+.s-skills{
+	@include clear();
+	&__container{
+		max-width: rem(472px);
+		margin: 0 auto;
+		@include clear();
+		@include apply-to($notebook){
+			max-width: 100%;
+		}
+	}
+	&__left{
+		padding-top: rem(30px);
+		@include apply-to($notebook){
+			@include col(6);
+			.s-skills__container{
+				max-width: rem(460px);
+			}
+		}
+		@include apply-to($desktop){
+			.s-skills__container{
+				max-width: 100%;
+			}
+		}
+	}
+	&__right{
+		padding-top: rem(30px);
+		background-color: darken(saturate(adjust-hue($colorLight, 48.0000), 30.6122), 9.6078);
+		padding-top: rem(30px);
+		padding-bottom: rem(30px);
+		@include apply-to($notebook){
+			@include col(6);
+		}
+		.s-skills__right-title{
+			max-width: rem(200px);
+		}
+
+		@include apply-to($tablet){
+			.s-skills__right-title{
+				max-width: rem(460px);
+			}
+		}
+	}
+	&__title{
+		margin-bottom: rem(30px);	
+		.title__svg{
+			transform: translate(-50%, -50%) scale(0.5);
+			@include apply-to($tablet){
+				transform: translate(-50%, -50%) scale(1);
+			}
+		}
+	}
+	&__title-small{
+		margin: 0 auto rem(20px);
+		max-width: rem(236px);
+		@include apply-to($tablet){
+			max-width: 100%;
+		}
+	}
+	&__avatar{
+		margin: 0	auto rem(30px);
+	}
+	&__description{
+		text-align: left;
+		line-height: em(24px);
+		color: $colorBase;
+		font-family: $r-r;
+		margin-bottom: rem(25px);
+		font-size: rem(14px);
+		@include apply-to($notebook){
+			font-size: rem(16px);
+		}
+	}
+}
+
+.s-skill__left-col{
+	&:nth-child(1){
+		@include apply-to($desktop){
+			@include col(6);
+		}
+	}
+	&:nth-child(2){
+		@include apply-to($desktop){
+			@include col(6);
+			padding-right: rem(20px);
+		}
+	}
+}
+
+
+
+.s-skills__category{
+	&-row{
+		margin-bottom: rem(30px);
+		&:nth-child(even){
+			.skill__circle{
+				stroke: rgba($colorMain,.55);
+			}
+		}
+	}
+	&-title{
+		margin-bottom: rem(30px);
+	} 
+	&-list{
+		width: 100%;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		@include apply-to($notebook){
+			text-align: left;
+			padding-left: rem(30px);
+		}
+	}
+	&-item{
+		list-style-type: none;
+		display: inline-block;
+		padding: 0 rem(10px) rem(30px);
+	}
+}

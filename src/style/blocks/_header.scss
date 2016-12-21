@@ -2,7 +2,7 @@
 .header{
 	@include img($img + '/mountains.jpg');
 	background-size: cover;
-	min-height: 568px;
+	height: 100vh;
 	padding-top: rem(15px);
 	position: relative;
 	@extend %slick;
@@ -10,8 +10,38 @@
 		opacity: .8;
 		font-family: $r-l;
 	}
+	&__content{
+		@include center();
+		top: 40%;
+		width: 100%;
+	}
+	&__button-down{
+		position: absolute;
+		bottom: 10vh;
+		width: 100%;
+		text-align: center;
+	}
+	&__button-ico{
+		//display: inline-block;
+		//height: 100%;
+		//width: 100%;
+		//@include line();
+		
+	}
+	&__avatar{
+		margin: 0 auto;
+	}
 }
 
+
+#about-page{
+	@include apply-to($notebook){
+		.header__angle__right-triangle{
+			fill: darken(saturate(adjust-hue($colorLight, 48.0000), 30.6122), 9.6078);
+		}
+	}
+	
+}
 
 // cascade
 .header__top-line{

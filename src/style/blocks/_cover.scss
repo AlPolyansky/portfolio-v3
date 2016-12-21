@@ -2,9 +2,34 @@
 .cover{
 	width: rem(300px);
   background-color: rgba(darken(saturate(adjust-hue($colorLight, 0.0000), 0.0000), 1.1765),0.85);
-  border-radius: rem(5px);
+  //border-radius: rem(5px);
   overflow: hidden;
   @extend %slick;
+  &__title{
+  	margin-bottom: em(27px);
+  }
+  &__fieds{
+  	padding: 0 rem(20px);
+  	margin-bottom: rem(20px);
+  }
+  &__button{
+  	display: flex;
+		flex-grow: 1;
+		width: 100%;
+  }
+  &__button-item{
+		flex-grow: 1;
+		display: block;
+		text-align: center;
+		border-right: rem(2px) solid rgba($colorLight,.5);
+		&:last-child{
+			border-right: none;
+		}
+  }
+}
+
+.cover--rounded{
+	border-radius: rem(5px);
 }
 
 .cover--welcome{
@@ -25,6 +50,29 @@
 			margin-bottom: 0;
 		}
 	}
+}
+
+.cover--send-me{
+	padding: rem(20px) 0 0;
+	.cover__title{
+		@include apply-to($tablet){
+			font-size: rem(30px);
+		}
+	}
+	.title__text{
+		&:after,&:before{
+			top: rem(10px);
+		}
+	}
+}
+
+.cover--blur{
+	background-image: url("../img/bg-sea.jpg");
+	background-repeat: no-repeat;
+	//background-size: cover;
+	background-position: -492px -498px;
+	//filter: blur(10px)
+	background-size: 1500px;
 }
 
 

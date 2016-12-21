@@ -5,7 +5,6 @@
 	&__list{
 		padding: 0;
 		margin: 0;
-		width: 100%;
 		text-align: center;
 
 	}
@@ -18,49 +17,150 @@
 		list-style: none;
 		color: $colorLight;
 		text-decoration: none;
-		
 		position: relative;
-		&:after{
-			@include trans(.3s);
+	}
+}
+
+
+.menu--popup{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	visibility: hidden;
+	&:after{
+		@include trans(.3s);
+		display: block;
+		content: '';
+		width: 0;
+		height: 100%;
+		background-color: rgba($colorMain,.87);
+		position: absolute;
+		left: 0;
+	}
+	&:before{
+		@include trans(.3s);
+		display: block;
+		content: '';
+		width: 0;
+		height: 100%;
+		background-color: rgba($colorMain,.87);
+		position: absolute;
+		right: 0;
+	}
+}
+
+
+.menu--popup__nav{
+	z-index: 10001;
+	@include center();
+	position: fixed;
+	@include trans(.5s);
+	width: 100%;
+	.menu{
+		&__list{
 			display: block;
-			content: '';
+			max-width: rem(420px);
+			margin: 0 auto;
+		}
+		&__item{
 			opacity: 0;
-			width: 1%;
-			height: 1px;
-			position: absolute;
-			background-color: $colorLight;
+			display: block;
+			font-size: rem(35px);
+			@include apply-to($tablet){
+				font-size: rem(49px);
+			}
+			@include apply-to($notebook){
+				font-size: rem(63px);
+			}
+			font-family: $b-r;
+			margin-bottom: em(16px);
+			position: relative;
 		}
-		&:hover{
+		&__link{
+			position: relative;
 			&:after{
-				opacity: 1;
-				width: 100%;
+				content: '';
+				display: block;
+				height: rem(5px);
+				position: absolute;
+				background-color: rgba($colorLight,.3);
+				left: rem(-42px);
+				top: 50%;
+				visibility: hidden;
+				width: 0;
+				@include trans(.2s);
+			}
+			&:before{
+				content: '';
+				display: block;
+				height: rem(5px);
+				position: absolute;
+				background-color: rgba($colorLight,.3);
+				right: rem(-42px);
+				top: 50%;
+				visibility: hidden;
+				width: 0;
+				@include trans(.2s);
+			}
+			&:hover{
+				&:after{
+					visibility: visible;
+					width: rem(22px);
+				}
+				&:before{
+					visibility: visible;
+					width: rem(22px);
+				}
 			}
 		}
 	}
 }
 
 
-
-//============== width >= 768px ==============
-
-@include apply-to($tablet){
-	.menu{
-		&__item{
-			font-size: rem(16px);
-			padding: 0 em(24px);
-		}
+.menu--popup-active{
+	visibility: visible;
+	&:after{
+		width: 50%;
 	}
-}
-
-
-//============== width >= 1200px ==============
-
-@include apply-to($notebook){
-	.menu{
-		&__item{
-			&:first-child{
-				padding-left: 0;
+	&:before{
+		width: 50%;
+	}
+	.menu--popup__nav{
+		.menu__item{
+			@include trans(.4s); 
+			transition-delay: .3s;
+			animation: show  .25s 1 forwards;
+			&:nth-child(1){
+				animation-delay: .2s;
+			}
+			&:nth-child(2){
+				animation-delay: .4s;
+			}
+			&:nth-child(3){
+				animation-delay: .6s;
 			}
 		}
+	}
+
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	50%{
+		opacity: 0.5;
+		transform: scale(1.2);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
 	}
 }

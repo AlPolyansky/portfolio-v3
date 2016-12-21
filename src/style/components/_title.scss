@@ -1,9 +1,11 @@
 .title{
 	text-align: center;
-	color: $colorBase;
-	@extend %slick;
+	color: $colorBase;	
 	position: relative;
+	padding: 0;
+	margin: 0;
 	font-weight: normal;
+	@extend %slick;
 }
 
 
@@ -61,7 +63,7 @@
 		opacity: .2;
 		height: rem(5px);
 		width: rem(22px);
-		top: 50%;
+		top: em(7px);
 	}
 	&:after{
 		left: 0;

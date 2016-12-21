@@ -7,39 +7,100 @@
 	overflow: hidden;
 }
 
-.footer__part{
-	&:nth-child(1){
-		margin-bottom: 15px;
-	}
-	&:nth-child(2){
-		margin-bottom: em(20px);
-	}
+.footer__nav,.footer__social{
+	display: inline-block;
 }
 
-
-
-
-//============== width >= 1200px ==============
-
-@include apply-to($notebook){
-	.footer__top{
-		border-bottom: 1px solid rgba($colorLight,.1);
-		margin-bottom: rem(20px);
-		text-align-last: justify;
-		.footer__part{
-			vertical-align: top;
-			display: inline-block;
+.footer__nav{
+	.menu__link{
+		&:after{
+			@include trans(.3s);
+			display: block;
+			content: '';
+			opacity: 0;
+			width: 1%;
+			height: 1px;
+			position: absolute;
+			background-color: $colorLight;
+		}
+		&:hover{
 			&:after{
+				opacity: 1;
 				width: 100%;
-				display: block;
-				content: '';
 			}
 		}
 	}
-	.footer__down{
-		.footer__part{
+	.menu__item{
+		@include apply-to($tablet){
+			font-size: rem(16px);
+			padding: 0 em(24px);
+		}
+		@include apply-to($notebook){
+			&:first-child{
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.footer__top{
+	@include clear();
+	@include apply-to($notebook){
+		border-bottom: 1px solid rgba($colorLight,.1);
+		margin-bottom: rem(20px);
+	}
+	.footer__part{
+		&:nth-child(1){
+			margin-bottom: 15px;
+			width: 100%;
+			text-align: center;
+			@include apply-to($notebook){
+				float: left;
+				text-align: left;
+				width: 50%;
+			}
+		}
+		&:nth-child(2){
+			margin-bottom: em(20px);
+			width: 100%;
+			text-align: center;
+			@include apply-to($notebook){
+				float: left;
+				text-align: right;
+				width: 50%;
+			}
+		}
+	}
+}
+
+#about-page{
+	.footer{
+		width: 100%;
+		background-color: rgba($colorBase,.85);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+	}
+}
+
+.footer__down{
+	.footer__part{
+		@include apply-to($notebook){
 			float: left;
 			width: 50%;
+		}
+		&:nth-child(1){
+			text-align: center;
+			@include apply-to($notebook){
+				text-align: left;
+			}
+		}
+		&:nth-child(2){
+			text-align: center;
+			@include apply-to($notebook){
+				text-align: right;
+			}
 		}
 	}
 }
