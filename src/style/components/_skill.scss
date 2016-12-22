@@ -2,7 +2,7 @@
 
 $size: 118px;
 $innerSize: 78px;
-$activeColor: $colorMain;
+$activeColor: #16c2aa;
 $percent: 0;
 $bgColor: lighten(desaturate(adjust-hue(#00bfa5, -129.8325), 86.4865), 48.0392);
 
@@ -29,7 +29,8 @@ $bgColor: lighten(desaturate(adjust-hue(#00bfa5, -129.8325), 86.4865), 48.0392);
 
 // INNER
 .skill__inner{
-  background-color: darken(saturate(adjust-hue($colorLight, 48.0000), 30.6122), 9.6078);  text-align: center;
+  background-color: $colorRigthSide;
+  text-align: center;
   height: $innerSize;
   width: $innerSize;
   position: absolute;

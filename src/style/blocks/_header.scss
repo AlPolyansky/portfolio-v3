@@ -1,6 +1,5 @@
 //============== width <= 320px ==============
 .header{
-	@include img($img + '/mountains.jpg');
 	background-size: cover;
 	height: 100vh;
 	padding-top: rem(15px);
@@ -43,7 +42,7 @@
 #about-page{
 	@include apply-to($notebook){
 		.header__angle__right-triangle{
-			fill: darken(saturate(adjust-hue($colorLight, 48.0000), 30.6122), 9.6078);
+			fill: $colorRigthSide;
 		}
 	}
 	

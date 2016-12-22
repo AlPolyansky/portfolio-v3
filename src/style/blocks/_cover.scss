@@ -77,6 +77,12 @@
 
 .cover--blur{
 	background-color: transparent;
+	.title{
+		color: $colorLight;
+		@include apply-to($tablet){
+			color: $colorBase;
+		}
+	}
 	.cover__blur{
 		position: absolute;
 		top: 0;
@@ -85,10 +91,7 @@
 		right: 0;
 		background: url("../img/bg-sea.jpg") no-repeat;
 		z-index: -1;
-		//background-position: -492px -563px;
 		filter: blur(4px);
-		//background-size: 1473px auto;
-		@include line();
 	}
 }
 

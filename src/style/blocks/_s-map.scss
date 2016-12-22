@@ -11,11 +11,11 @@
 		margin: 0 auto;
 		background-color: $colorLight;
 		@extend %slick;
-		@include apply-to($tablet){
+		@include apply-to(450px){
 			max-width: rem(348px);
 			position: absolute;
 			background-color: rgba($colorLight,.85);
-			top: 50%;
+			top: 38%;
 			left: 50%;
     	transform: translate(-50%, -50%);
     	padding: rem(36px) rem(30px);

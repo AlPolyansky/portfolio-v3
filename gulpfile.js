@@ -95,6 +95,8 @@ var path = {
 var scssLibs = [
   // Пример:  path.sourse.folder + '/normalize.css/normalize.css',
   path.sourse.libs + '/normalize.css/normalize.css',
+  path.sourse.libs + '/slick-carousel/slick/slick.css',
+  path.sourse.libs + '/slick-carousel/slick/slick-theme.css',
 ];
 
 
@@ -105,6 +107,7 @@ var jsLibs = [
   // Пример:  path.sourse.folder + '/jquery/dist/jquery.js',
   path.sourse.libs + '/jquery/dist/jquery.min.js',
   path.sourse.libs + '/svg4everybody/dist/svg4everybody.js',
+  path.sourse.libs + '/slick-carousel/slick/slick.min.js',
 ];
 
 
@@ -136,6 +139,8 @@ var mainJs = [
   path.sourse.folder + '/' + path.sourse.js + '/modules/_parallax.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_blur.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_map.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_preloader.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_slider.js',
   path.sourse.folder + '/' + path.sourse.js + '/app.js',
 ];
 

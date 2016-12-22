@@ -8,6 +8,9 @@
 			max-width: 100%;
 		}
 	}
+	@include apply-to($desktop){
+		display: flex;
+	}
 	&__left{
 		padding-top: rem(30px);
 		@include apply-to($notebook){
@@ -24,7 +27,7 @@
 	}
 	&__right{
 		padding-top: rem(30px);
-		background-color: darken(saturate(adjust-hue($colorLight, 48.0000), 30.6122), 9.6078);
+		background-color: $colorRigthSide;
 		padding-top: rem(30px);
 		padding-bottom: rem(30px);
 		@include apply-to($notebook){

@@ -31,6 +31,7 @@ $colorBase: #455a64;
 $colorMain: #00bfa5;
 $colorSliderDesk: #efebe0;
 $colorSliderInfo: #f0efe9;
+$colorRigthSide: #eeebdf;
 
 
 
@@ -55,6 +56,9 @@ body{
 	@include apply-to($tablet){
 		padding: 0 rem(24px);
 	}
+}
+.no-scroll{
+	overflow: hidden;
 }
 
 ::selection {

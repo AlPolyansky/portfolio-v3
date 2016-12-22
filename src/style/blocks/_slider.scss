@@ -1,155 +1,310 @@
-//============== width <= 320px ==============
+// ================== 1800 width ================== //
 
-// grid
+$slider-height: 100vh;
 
 .slider{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	height: $slider-height;
+	width: 100%;
 	overflow: hidden;
-	display: flex;
-  flex-flow: row wrap;
-  @include apply-to($notebook){
-		display: block;
-		height: 100vh;
-	} 
-	&__info{
-		display: flex;
-    width: 100%;
-    height: 100%;
-    background: $colorSliderInfo;
-    text-align: center;
-    float: left;
-		@include apply-to($notebook){
-			width: 50%;
-		} 
+	min-height: rem(500px);
+	&__desk{
+		width: 50%;
+		height: 100%;
+		float: left;
+		position: relative;
+		&__wrap{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.slider__skills{
+			color: $colorMain;
+			text-align: center;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
 	}
+	.desk__content{
+		position: absolute;
+		@include center();
+		margin: auto;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	.active__desk__content{
+		opacity: 1;
+	}
+	&__content{
+		float: right;
+		width: 50%;
+		height: 100%;
+		height: calc(100% - 255px);
+		position: relative;
+	}
+
+
+
 	&__view{
-		height: rem(259px);
-		order: -1;
 		width: 100%;
-		@extend %slick;
-		@include apply-to($tablet){
-			height: rem(530px);
-		}
-		@include apply-to($notebook){
-			width: 50%;
-			float: right;
-			height: calc(100% - #{rem(229px)});
-		} 
+		height: 100%;
+		background-color: #e1e4d7;
+		margin: 0;
+		overflow: hidden;
+		position: relative;
 	}
-	&__control{
+	&__list{
+		margin: 0;
+		padding: 0;
 		width: 100%;
-		height: rem(123px);
-		@extend %slick;
-		// new breakpoint
-		@include apply-to(516px){
-			min-height: rem(217px);
+		list-style-type: none;
+		position: relative;
+		height: 100%;
+	}
+	&__item{
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: -1;
+		padding: 50px;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+	}
+	&__active{
+		z-index: 10;
+	}
+	&__img-wrap{
+		width: 100%;
+		max-height: 100%;
+		text-align: center;
+		overflow: hidden;
+		@include center();
+	}
+	&__img{
+		max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    display: block;
+	}
+	&__controll{
+		height: 255px;
+		width: 50%;
+		float: left;
+		overflow: hidden;
+	}
+	&__button{
+		width: 50%;
+		float: left;
+		height: 100%;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			width: 100%;
+			z-index: 200;
+			height: 100%;
+			position: absolute;
+			background-color: rgba(#777,.5);
 		}
-		@include apply-to($notebook){
-			width: 50%;
-			height: rem(229px);
-			float: right;
-		} 
+	}
+	&__ico{
+		position: absolute;
+		text-decoration: none;
+		color: #fff;
+		z-index: 201;
+		font-size: 60px;
+		top: 45%;
+		@include center();
+	}
+
+	}
+
+
+.slider__up,.slider__down{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	width: 50%;
+	float: left;
+	@include center();
+}
+
+
+.slider{
+	.slider__view{
+		.slider__img-wrap{
+			width: 100%;
+			height: 100%;
+			padding: 40px;
+			.slider__img{
+				width: 100%;
+				height: 100%;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+	}
+}
+.slider__button{
+	.slider__img{
+		width: 100%;
 	}
 }
 
-// elements
 
-.slider{
-	&__info-in{
-		display: inline-block;
-		width: 100%;
-		margin: auto;
-		padding: em(23px) 3px;
-		@include apply-to($tablet){
-			padding: em(50px) 3px;
-		}
-		@include apply-to($notebook){
-			max-width: rem(420px);
-		}
-	}
-	&__info-button{
-		width: rem(200px);
-	}
-	&__info-ico{
-		position: absolute;
-		left: em(30px);
-		@include apply-to($tablet){
-			left: em(25px);
-			top: 8px;
-		}
-	}
-	&__info-button-text{
-		padding-left: em(20px);
-	}
+.slider__button-ico{
+	fill: $colorLight;
+	width: 38px;
+	height: 38px;
+}
 
-	&__title{
-		max-width: rem(242px);
-		margin: 0 auto em(20px);
-		@include apply-to($tablet){
-			max-width: rem(480px);
-		}
-	}
+.slider__rotate{
+	transform: rotate(180deg);
+}
 
-	&__skills{
-		color: $colorMain;
-		display: block;
-		padding: em(10px);
-		border-top: 1px solid $colorMain;
-		border-bottom: 1px solid $colorMain;
-		margin-bottom: em(30px);
-		@include apply-to($tablet){
-			max-width: rem(380px);
-			margin: 0 auto em(18px);
-		}
-	}
-	&__list{
-		padding: 0;
-		margin: 0;
-		height: 100%;
-		background-color: $colorSliderDesk;
-		padding: rem(10px);
-		@include apply-to($tablet){
-			padding: rem(20px);
-		}
-		
-	}
-	&__item{
-		list-style-type: none;
-		height: 100%;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center center
-	}
-	&__button{
-		height: 100%;
-		width: 50%;
-		float: left;
-		position: relative;
-		&:before{
-			display: block;
-			content: '';
-			position: absolute;
-			background-color: rgba(darken(desaturate(adjust-hue($colorSliderDesk, 7.4286), 27.3988), 21.1765),.7);
+.slider__title{
+	margin-bottom: rem(20px);
+	max-width: rem(500px);
+}
+
+
+
+
+
+
+// Slider animate
+$sliderSpeed : .5s;
+
+.slider__controll{
+	.slider__item{
+		top: 100%;
+		@include trans($sliderSpeed);
+		//background-color: #ebefe2;
+		.slider__img-wrap{
 			height: 100%;
 			width: 100%;
 		}
+		.slider__img{
+			height: 100%;
+			width: 100%;
+			background: no-repeat center/contain;
+		}
+
 	}
-	&__button-ico{
-		width: 100%;
-		cursor: pointer;
-		max-height: rem(29px);
-		max-width: rem(43px);
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
-		fill: $colorLight;
+	
+	.slider__active{
+		top: 0%;
+		z-index: 11;
+	}
+		
+.slider__up{
+	.slide--down{
+		top: 100%;
+		z-index: 10;
+	}
+	.slide--up{
+		top: -100%;
+		z-index: 10;
 	}
 }
 
 
-// modificators
-.slider__ico--rotate{
-	transform: rotate(180deg);
+
+
+.slider__down{
+	.slide--down{
+		top: -100%;
+		z-index: 10;
+	}
+	.slide--up{
+		top: 100%;
+		z-index: 10;
+	}
+}
+
+}
+.slider__item{
+	opacity: 0;
+	transition: opacity .7s ease-in-out;
+}
+.slider__active{
+	
+	opacity: 1;
+}
+
+
+
+
+
+
+
+// ================== 768 width ================== //
+
+
+@include apply-to($notebook,max){
+
+
+	.slider{
+		display: flex;
+		flex-direction: column;
+		min-height: 1020px;
+		flex-wrap: wrap;
+		&__desk{
+			width: 100%;
+			order: 2;
+			height: 268px;
+			
+		}
+		.desk__content{
+			width: 100%;
+			.title{
+				max-width: 100%;
+				font-size: 30px;
+			}
+		}
+		&__view{
+			width: 100%;
+			order: 1;
+			
+		}
+		&__content{
+			width: 100%;
+			height: 529px;
+		}
+		&__controll{
+			width: 100%;
+			order: 3;
+			height: 223px;
+		}
+
+
+	}
+
+
+}
+
+
+// ================== 480 width ================== //
+
+
+@include apply-to($tablet,max){
+
+	.slider{
+		.desk__content{
+			.title{
+				font-size: 21px;
+			}
+		}
+		.slider__skills{
+			font-size: 14px;
+		}
+		.button{
+				font-size: 14px;
+			}
+	}
+
+
 }
