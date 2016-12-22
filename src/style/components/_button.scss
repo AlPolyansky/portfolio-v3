@@ -48,6 +48,7 @@
 		&:last-child{
 			border-right: none;
 		}
+		
 	}
 	&__link{
 		border: none;
@@ -63,6 +64,9 @@
 		&:last-child{
 			border-right: none;
 		}
+		&:hover{
+			background-color: darken(desaturate(adjust-hue($colorMain, 4.0766), 8.3333), 3)
+		}
 	}
 }
 
@@ -73,15 +77,6 @@
 		padding-left: em(41px);
 	}
 }
-
-/* .slider{
-	.button{
-		margin-bottom: rem(30px);
-		&__ico{
-			margin-right: em(10px);
-		}
-	}
-} */
 
 
 //============== width >= 768px ==============

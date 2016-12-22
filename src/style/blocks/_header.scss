@@ -21,15 +21,21 @@
 		width: 100%;
 		text-align: center;
 	}
-	&__button-ico{
-		//display: inline-block;
-		//height: 100%;
-		//width: 100%;
-		//@include line();
-		
-	}
 	&__avatar{
 		margin: 0 auto;
+	}
+	&__svg{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(4);
+		display: none;
+		@include apply-to($notebook){
+			display: block;
+			fill : $colorLight;
+			opacity: .06;
+			z-index: -1;
+		}
 	}
 }
 

@@ -178,7 +178,7 @@ var BaseModule = function(){
     };
 
     this.getImgPath = function(){
-    	return "./assets/img/";
+    	return "./img/";
     }
     this.getTransition = function(){
         return 'transitionend webkitTransitionEnd oTransitionEnd';

@@ -14,6 +14,7 @@
 	&__button-up{
 		display: block;
 		position: relative;
+		margin-bottom: rem(60px);
 	}
 	&__send-me{
 		.cover{
@@ -39,6 +40,7 @@
 		@include clear;
 		max-width: rem(500px);
 		margin: 0 auto;
+		margin-bottom: rem(60px);
 		@include apply-to($tablet){
 			max-width: rem(820px);
 		}	
@@ -63,38 +65,37 @@
 		left: 0;
 		right: 0;
 		z-index: -1;
-		background-image: url("../img/bg-sea.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		min-width: rem(1500px);
+		background: url("../img/bg-sea.jpg") no-repeat top/100%;
+		min-width: 1500px;
 	}
 }
 
 
 .section--works,.section--about{
 	padding-top: em(40px);
+
+}
+
+.section--about{
 	.section__title{
-		margin-bottom: em(60px);
+		@include apply-to($tablet){
+			margin-bottom: em(40px);
+		}
 	}
 }
 
 .section--works{
 	padding-top: em(50px);
-}
-.section--about{
-	padding-top: em(80px);
-	overflow: hidden;
-}
-
-.section--about{
-	position: relative;
-	padding-bottom: rem(40px);
-	@include apply-to($tablet){
-		padding-bottom: rem(50px);
+	.section__title{
+		margin-bottom: em(40px);
 	}
-	@include apply-to($notebook){
-		padding-bottom: rem(70px);
-	}	
+}
+.section--about{
+	overflow: hidden;
+	position: relative;
+	@include apply-to($tablet){
+		padding-top: em(80px);
+	}
 }
 
 .section--skills{

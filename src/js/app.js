@@ -4,5 +4,7 @@ $(document).ready(function () {
 	commonModule.init();
 	menuModule.init();
 	parallaxModule.init();
-
+	if(base.getPage() == 'works'){
+		blurModule.init();
+	}
 });

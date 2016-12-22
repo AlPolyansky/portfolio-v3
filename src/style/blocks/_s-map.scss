@@ -2,7 +2,6 @@
 	height: 100vh;
 	min-height: rem(648px);
 	//position: relative;
-	background-color: red;
 	@include apply-to($tablet){
 		min-height: rem(948px);
 	}
@@ -29,4 +28,10 @@
 	&__title{
 		margin-bottom: em(20px);
 	}
+}
+
+#map{
+	width: 100%;
+  height: 100%;
+  position: absolute;
 }

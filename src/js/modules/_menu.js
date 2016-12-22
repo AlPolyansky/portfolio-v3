@@ -14,8 +14,21 @@ var menuModule = (function() {
 			$button.on('click',buttonAnimation)
 		}
 
+		var _addMenu = function(){
+			
+				var $menu = $('.menu')
+				.clone()
+				.removeAttr('class')
+				.addClass('menu menu--popup__nav')
+				.appendTo('body')
+				.wrap('<div class="menu--popup"></div>');
+		}
+
     return {
     	init: function(){
+    		if(base.getPage()){
+    			_addMenu();
+    		}
     		_setUpListener();
     	}
     }

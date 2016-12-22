@@ -21,7 +21,6 @@ $slick-speed : .3s;
 $img : '../img/';
 
 *, *::after, *::before {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -70,13 +69,13 @@ body{
 
 // pages
 
-/* #welcome-page{
-	min-height: 100vh;
-	height: 100%;
+#welcome-page{
+	min-height: 500px;
+	height: 100vh;
 	@include img($img + '/mountains.jpg');
 	background-size: cover;
 	position: relative;
-} */
+}
 
 
 

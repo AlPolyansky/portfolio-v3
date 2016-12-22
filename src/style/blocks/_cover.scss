@@ -4,6 +4,7 @@
   background-color: rgba(darken(saturate(adjust-hue($colorLight, 0.0000), 0.0000), 1.1765),0.85);
   //border-radius: rem(5px);
   overflow: hidden;
+  position: relative;
   @extend %slick;
   &__title{
   	margin-bottom: em(27px);
@@ -51,6 +52,14 @@
 		}
 	}
 }
+.cover--welcome{
+	.title--size-m{
+		margin-bottom: em(10px);
+		@include apply-to($tablet){
+			font-size: rem(28px);
+		}
+	}
+}
 
 .cover--send-me{
 	padding: rem(20px) 0 0;
@@ -67,13 +76,22 @@
 }
 
 .cover--blur{
-	background-image: url("../img/bg-sea.jpg");
-	background-repeat: no-repeat;
-	//background-size: cover;
-	background-position: -492px -498px;
-	//filter: blur(10px)
-	background-size: 1500px;
+	background-color: transparent;
+	.cover__blur{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url("../img/bg-sea.jpg") no-repeat;
+		z-index: -1;
+		//background-position: -492px -563px;
+		filter: blur(4px);
+		//background-size: 1473px auto;
+		@include line();
+	}
 }
+
 
 
 

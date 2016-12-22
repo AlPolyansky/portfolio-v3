@@ -23,9 +23,7 @@ var mqpacker = require("css-mqpacker");
 var proccessors = [
   cssnext(),
   flexbugs(),
-  mqpacker({
-    sort: true
-  })
+  mqpacker()
 ]
 
 
@@ -136,6 +134,8 @@ var mainJs = [
   path.sourse.folder + '/' + path.sourse.js + '/modules/_common.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_menu.js',
   path.sourse.folder + '/' + path.sourse.js + '/modules/_parallax.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_blur.js',
+  path.sourse.folder + '/' + path.sourse.js + '/modules/_map.js',
   path.sourse.folder + '/' + path.sourse.js + '/app.js',
 ];
 

@@ -41,7 +41,7 @@
 		@extend %slick;
 		// new breakpoint
 		@include apply-to(516px){
-			height: rem(217px);
+			min-height: rem(217px);
 		}
 		@include apply-to($notebook){
 			width: 50%;
